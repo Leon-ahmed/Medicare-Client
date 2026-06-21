@@ -3,16 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import banner from "../../public/banner.png";
+import { motion } from "framer-motion";
 
 export default function Banner() {
   return (
     <section className="w-full">
 
-      {/* Mobile */}
+      {/* ================= MOBILE ================= */}
       <div className="md:hidden bg-amber-50/20 py-10 flex items-center">
+
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 gap-8">
 
-        
+         
           <div className="flex justify-center">
             <Image
               src={banner}
@@ -22,8 +24,12 @@ export default function Banner() {
             />
           </div>
 
-      
-          <div>
+       
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-3xl font-bold text-[#003D9B] leading-tight">
               Your Health, Our Priority
             </h1>
@@ -47,16 +53,12 @@ export default function Banner() {
                 Contact Us
               </Link>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
 
-    
-
-
-
-    {/* Desktop */}
+      {/* ================= DESKTOP ================= */}
       <div className="hidden md:flex relative min-h-screen items-center">
 
      
@@ -67,21 +69,39 @@ export default function Banner() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 
-   
+    
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white">
 
           <div className="max-w-2xl">
 
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+         
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-4xl lg:text-5xl font-bold leading-tight"
+            >
               Your Health, Our Priority
-            </h1>
+            </motion.h1>
 
-            <p className="mt-4 text-gray-200 text-lg">
+         
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="mt-4 text-gray-200 text-lg"
+            >
               Book appointments with trusted doctors, manage your health records,
               and get medical support anytime with MediCare Connect.
-            </p>
+            </motion.p>
 
-            <div className="mt-6 flex gap-4">
+          
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="mt-6 flex gap-4"
+            >
               <Link
                 href="/find-doctors"
                 className="px-6 py-3 bg-[#003D9B] rounded-full font-medium hover:scale-105 transition"
@@ -95,7 +115,7 @@ export default function Banner() {
               >
                 Contact Us
               </Link>
-            </div>
+            </motion.div>
 
           </div>
 
