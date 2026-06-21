@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from "framer-motion";
 import { FaHeart, FaBrain, FaBone, FaBaby, FaUserMd } from "react-icons/fa";
 
 export default function SpecializationsSection() {
@@ -35,7 +36,7 @@ export default function SpecializationsSection() {
     <section className="bg-[#F9FAFF] py-16">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
+     
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#003D9B]">
             Medical Specializations
@@ -45,13 +46,31 @@ export default function SpecializationsSection() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-
+        {/*  Animation Added */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
+        >
           {specializations.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border border-gray-100 shadow-sm hover:shadow-md transition rounded-2xl p-6 text-center"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white border border-gray-100 shadow-sm hover:shadow-md rounded-2xl p-6 text-center"
             >
               <div className="text-[#003D9B] text-3xl flex justify-center mb-4">
                 {item.icon}
@@ -64,10 +83,9 @@ export default function SpecializationsSection() {
               <p className="text-sm text-gray-500 mt-2">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
-
-        </div>
+        </motion.div>
 
       </div>
     </section>
