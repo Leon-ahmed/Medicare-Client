@@ -148,9 +148,9 @@ export default function Navbar() {
               Logout
             </button>
            </div>
-        )  :  (<> <div className="flex flex-col w-8/12 mx-auto py-4  gap-3">
-                       <button className="p-2 border border-[#003D9B] text-[#003D9B] transition-all ease-in-out hover:scale-105 active:scale-95   ">Login</button>
-                       <button className="p-2 bg-[#003D9B] text-white   transition-all ease-in-out hover:scale-105 active:scale-95   ">Register</button>
+        )  :  (<> <div className="flex flex-col  justify-center items-center   py-4  gap-3">
+                       <Link href="/login" className="py-2    px-8    w-30  border border-[#003D9B] text-[#003D9B] transition-all ease-in-out hover:scale-105 active:scale-95   ">Login</Link>
+                       <Link href="/register" className="py-2  px-8  w-30 bg-[#003D9B] text-white   transition-all ease-in-out hover:scale-105 active:scale-95   ">Register</Link>
             
             </div> </>)
                   }

@@ -1,9 +1,15 @@
-import React from 'react';
+import SignIn from "@/components/Shared/SignIn";
+
+ export const metadata = {
+  title: "MediCare Connect-Sign In",
+  description: "Hospital Appointment & Healthcare Management System",
+};
+
 
 const SignInPage = () => {
     return (
         <div>
-            Hello
+           <SignIn></SignIn>
         </div>
     );
 };

@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { toast } from "react-toastify";
 import {
   Button,
   Card,
@@ -21,7 +22,7 @@ import { useRouter } from "next/navigation";
 export default function SignUp() {
   const router = useRouter();
 
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -38,16 +39,17 @@ export default function SignUp() {
    })
 
      if(!error){
+          toast.success("Sign Up successful!");
         sessionStorage.setItem("loginSuccess", "true");
         router.push("/login");
      }
-
+   
 
   };
 
   return (
     <div className="bg-amber-50 pt-20 pb-20 ">
-      <Card className="border border-gray-100   mx-5 sm:mx-5 md:mx-auto  max-w-115 py-8   md:py-10  ">
+      <Card className="border border-gray-100   max-w-80 mx-auto    sm:max-w-100 sm:mx-auto md:mx-auto  md:max-w-115 py-8   md:py-10  ">
       <h1 className="text-center text-2xl font-bold">Sign up</h1>
 
       <Form className="flex max-w-90 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -57,7 +59,7 @@ export default function SignUp() {
           <FieldError />
         </TextField>
 
-        <TextField isRequired name="image" type="text">
+        <TextField name="image" type="url">
           <Label>Image URL</Label>
           <Input placeholder="Image URL" />
           <FieldError />
