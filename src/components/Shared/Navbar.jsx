@@ -95,8 +95,8 @@ export default function Navbar() {
               Logout
             </button>
           </>)  :  (<> <div className="space-x-2">
-                     <button className="p-2    text-[#003D9B] transition-all ease-in-out hover:scale-105 active:scale-95   ">Login</button>
-                       <button className="p-2 bg-[#003D9B] text-white rounded-full font-medium   transition-all ease-in-out hover:scale-105 active:scale-95   ">Register</button>
+                     <Link href="/login" className="p-2    text-[#003D9B] transition-all ease-in-out hover:scale-105 active:scale-95   ">Login</Link>
+                     <Link href="/register"    className="p-2 bg-[#003D9B] text-white rounded-full font-medium   transition-all ease-in-out hover:scale-105 active:scale-95   ">Register</Link>
             
             </div> </>)
                   }
