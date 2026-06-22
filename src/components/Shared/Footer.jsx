@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.png";
+import logo from "../../../public/logo.png";
 import {Handset} from '@gravity-ui/icons';
 import {MapPin} from '@gravity-ui/icons';
 import {Envelope} from '@gravity-ui/icons';
@@ -23,6 +23,11 @@ export default function Footer() {
                 alt="MediCare Connect"
                 width={50}
                 height={50}
+
+                  style={{
+    width: "auto",
+    height: "auto",
+  }}
               />
               <h2 className="text-xl font-semibold">
                 MediCare Connect

@@ -1,4 +1,4 @@
-import AboutUsSection from '@/components/AboutUsSection';
+import AboutUsSection from '@/components/AboutUs/AboutUsSection';
 import React from 'react';
 export const metadata = {
   title: "MediCare Connect-About Us",

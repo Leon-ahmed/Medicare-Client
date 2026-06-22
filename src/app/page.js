@@ -1,6 +1,6 @@
-import Banner from "@/components/Banner";
-import SpecializationsSection from "@/components/SpecializationsSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
+import Banner from "@/components/Home/Banner";
+import SpecializationsSection from "@/components/Home/SpecializationsSection";
+import WhyChooseSection from "@/components/Home/WhyChooseSection";
  
 
 export default function Home() {

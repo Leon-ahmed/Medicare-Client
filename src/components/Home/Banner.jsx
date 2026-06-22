@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import banner from "../../public/banner.png";
+import banner from "../../../public/banner.png";
 import { motion } from "framer-motion";
 
 export default function Banner() {
@@ -19,7 +19,7 @@ export default function Banner() {
             <Image
               src={banner}
               alt="Healthcare Banner"
-              className="w-full max-w-sm rounded-2xl"
+              className="w-full max-w-sm  rounded-2xl"
               priority
             />
           </div>
@@ -67,7 +67,7 @@ export default function Banner() {
         </div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
     
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white">

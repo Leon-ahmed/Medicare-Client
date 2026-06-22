@@ -1,5 +1,5 @@
  import Image from "next/image";
-import four from "../../public/five.svg"
+import four from "../../../public/five.svg"
 export default function AboutUsSection() {
   return (
     <section className="bg-[#F9FAFF] py-16">

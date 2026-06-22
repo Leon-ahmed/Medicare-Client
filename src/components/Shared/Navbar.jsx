@@ -1,9 +1,9 @@
 'use client'
 import { useState } from "react";
 import { Avatar, Link } from "@heroui/react";
-import logo from "../../public/logo.png"
+import logo from "../../../public/logo.png"
 import Image from "next/image";
-import Navlink from "@/components/Navlink";
+import Navlink from "@/components/Shared/Navlink";
 export default function Navbar() {
     const user = null
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,10 @@ export default function Navbar() {
             <header className="flex h-16 items-center justify-between px-6">
                 <div className="flex items-center gap-4">
 
-                    <div className="flex items-center gap-1 text-[#003D9B] font-medium text-xl   " > <Image src={logo} alt="logo" height={50} width={50}   ></Image>   MediCare Connect</div>
+                    <div className="flex items-center gap-1 text-[#003D9B] font-medium text-xl   " > <Image src={logo} alt="logo" height={50} width={50}   style={{
+    width: "auto",
+    height: "auto",
+  }}  ></Image>   MediCare Connect</div>
                 </div>
 
               
