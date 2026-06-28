@@ -44,7 +44,9 @@ export default function SignIn() {
   }
     toast.success("Login successful!");
    sessionStorage.setItem("loginSuccess", "true");
+   router.refresh();
    router.push("/");
+   
 };
 
  const signIn = async () => {
